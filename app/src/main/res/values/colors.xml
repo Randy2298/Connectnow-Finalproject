@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6A1B9A</color> <!-- Deep Purple -->
+    <color name="colorPrimaryDark">#4A148C</color> <!-- Dark Purple -->
+    <color name="colorAccent">#AB47BC</color> <!-- Light Purple -->
+
+    <color name="colorBlue">#4A148C</color> <!-- Matching Dark Purple -->
+    <color name="colorGray">#E1E2E1</color> <!-- Light Gray -->
+    <color name="white">#FFFFFF</color> <!-- White -->
+    <color name="colorBlack">#000000</color> <!-- Black -->
+    <color name="gray">#9E9E9E</color> <!-- Medium Gray -->
+
+    <!--<color name="online">#4CAF50</color>-->
+    <color name="online">#66BB6A</color> <!-- Green -->
+    <color name="offline">#BDBDBD</color> <!-- Light Gray -->
+    <color name="greyText">#757575</color> <!-- Dark Gray -->
+
+    <color name="timingBGColorBlue">#512DA8</color> <!-- Purple for Timing Background -->
+    <color name="timingBGColorWhite">#FFFFFF</color> <!-- White for Timing Background -->
+    <color name="black_50">#80000000</color> <!-- 50% Black -->
+    <color name="splashStart">#9575CD</color> <!-- Light Purple -->
+    <color name="splashEnd">#7E57C2</color> <!-- Medium Purple -->
+</resources>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.my.real.chat.activities">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name="com.my.real.chat.activities.UIApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="AllowBackup,LockedOrientationActivity,UnusedAttribute">
+
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name="com.my.real.chat.activities.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.my.real.chat.activities.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.my.real.chat.activities.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.my.real.chat.activities.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.my.real.chat.activities.MessageActivity"
+            android:parentActivityName="com.my.real.chat.activities.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.my.real.chat.activities.ProfileDialogActivity"
+            android:parentActivityName="com.my.real.chat.activities.MainActivity"
+            android:theme="@style/MyTitledActivityDialogTheme" />
+        <activity
+            android:name="com.my.real.chat.activities.GroupsAddActivity"
+            android:parentActivityName="com.my.real.chat.activities.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.my.real.chat.activities.ViewUserProfileActivity"
+            android:parentActivityName="com.my.real.chat.activities.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.my.real.chat.activities.WebViewBrowserActivity"
+            android:parentActivityName="com.my.real.chat.activities.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.my.real.chat.activities.UsersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.my.real.chat.activities.GroupsMessagesActivity"
+            android:parentActivityName="com.my.real.chat.activities.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.my.real.chat.activities.GroupsParticipantsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.my.real.chat.activities.ImageViewerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.my.real.chat.activities.SettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.my.real.chat.activities.settings.PrivacySettingActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- Image Cropper -->
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" /> <!-- optional (needed if default theme has no action bar) -->
+        <service
+            android:name="com.my.real.chat.activities.fcm.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
